@@ -65,6 +65,10 @@ html, body {
 .sb-fb { background: #1877f2; }
 .sb-ig { background: linear-gradient(135deg, #f09433 0%, #dc2743 50%, #bc1888 100%); }
 .sb-li { background: #0a66c2; }
+.social-btn-stack { flex-direction: column; height: auto; min-height: 56px; padding: 10px 6px; gap: 4px; text-align: center; }
+.social-btn-stack svg { width: 15px; height: 15px; }
+.social-btn-main { font-size: 10px; font-weight: 800; line-height: 1.15; }
+.social-btn-sub { font-size: 6.5px; font-weight: 600; letter-spacing: .2px; opacity: .85; line-height: 1.2; }
 
 /* WhatsApp */
 .wa-btn {
@@ -129,8 +133,18 @@ html, body {
 .share-btn:hover { border-color: #3e7eca; color: #3e7eca; background: #f0f6ff; }
 .share-btn svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-.card-footer { background: #1e2a3a; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
-.footer-domain { font-size: 11px; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: .5px; }
+.card-footer { background: #1e2a3a; padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.footer-site-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: linear-gradient(135deg, #3e7eca, #6a8aff);
+  color: white; font-family: 'Montserrat', sans-serif;
+  font-size: 11px; font-weight: 800; letter-spacing: .3px;
+  padding: 9px 16px; border-radius: 20px; text-decoration: none;
+  box-shadow: 0 4px 16px rgba(106,138,255,.45);
+  transition: transform .2s, box-shadow .2s, opacity .2s;
+}
+.footer-site-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(106,138,255,.6); opacity: .95; }
+.footer-site-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 .footer-dots { display: flex; gap: 5px; }
 .footer-dot { width: 6px; height: 6px; border-radius: 50%; }
 </style>
@@ -192,11 +206,14 @@ html, body {
     <div>
       <div class="social-label">Instagram</div>
       <div class="social-row">
-        <a class="social-btn sb-ig" href="https://www.instagram.com/loreto.consultora/" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg> Loreto
+        <a class="social-btn social-btn-stack sb-ig" href="https://www.instagram.com/loreto.consultora/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+          <span class="social-btn-main">Loreto Consultora</span>
+          <span class="social-btn-sub">(Portafolio Empresarial)</span>
         </a>
-        <a class="social-btn sb-ig" href="https://www.instagram.com/viviijimenezz/" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg> Viviana
+        <a class="social-btn social-btn-stack sb-ig" href="https://www.instagram.com/viviijimenezz/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+          <span class="social-btn-main">Viviana Jimenez</span>
         </a>
       </div>
     </div>
@@ -204,11 +221,14 @@ html, body {
     <div>
       <div class="social-label">LinkedIn</div>
       <div class="social-row">
-        <a class="social-btn sb-li" href="https://www.linkedin.com/company/loreto-consultora/" target="_blank">
-          <svg viewBox="0 0 24 24" fill="white" stroke="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> Loreto
+        <a class="social-btn social-btn-stack sb-li" href="https://www.linkedin.com/company/loreto-consultora/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="white" stroke="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="social-btn-main">Loreto Consultora</span>
+          <span class="social-btn-sub">(Portafolio Empresarial)</span>
         </a>
-        <a class="social-btn sb-li" href="https://www.linkedin.com/in/viviana-jimenez-paez/" target="_blank">
-          <svg viewBox="0 0 24 24" fill="white" stroke="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg> Viviana
+        <a class="social-btn social-btn-stack sb-li" href="https://www.linkedin.com/in/viviana-jimenez-paez/" target="_blank">
+          <svg viewBox="0 0 24 24" fill="white" stroke="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span class="social-btn-main">Viviana Jimenez</span>
         </a>
       </div>
     </div>
@@ -252,7 +272,10 @@ html, body {
   </div>
 
   <div class="card-footer">
-    <div class="footer-domain">loretoconsultora.lat</div>
+    <a class="footer-site-btn" href="https://loretoconsultora.lat" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      loretoconsultora.lat
+    </a>
     <div class="footer-dots">
       <div class="footer-dot" style="background:#5cc8c2;"></div>
       <div class="footer-dot" style="background:#f4a7c0;"></div>

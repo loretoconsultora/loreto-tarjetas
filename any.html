@@ -129,8 +129,18 @@ html, body {
 .share-btn:hover { border-color: #3e7eca; color: #3e7eca; background: #f0f6ff; }
 .share-btn svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-.card-footer { background: #1e2a3a; padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
-.footer-domain { font-size: 11px; font-weight: 600; color: rgba(255,255,255,.4); letter-spacing: .5px; }
+.card-footer { background: #1e2a3a; padding: 12px 28px; display: flex; align-items: center; justify-content: space-between; margin-top: auto; }
+.footer-site-btn {
+  display: inline-flex; align-items: center; gap: 7px;
+  background: linear-gradient(135deg, #3e7eca, #6a8aff);
+  color: white; font-family: 'Montserrat', sans-serif;
+  font-size: 11px; font-weight: 800; letter-spacing: .3px;
+  padding: 9px 16px; border-radius: 20px; text-decoration: none;
+  box-shadow: 0 4px 16px rgba(106,138,255,.45);
+  transition: transform .2s, box-shadow .2s, opacity .2s;
+}
+.footer-site-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(106,138,255,.6); opacity: .95; }
+.footer-site-btn svg { width: 13px; height: 13px; flex-shrink: 0; }
 .footer-dots { display: flex; gap: 5px; }
 .footer-dot { width: 6px; height: 6px; border-radius: 50%; }
 </style>
@@ -232,7 +242,10 @@ html, body {
   </div>
 
   <div class="card-footer">
-    <div class="footer-domain">loretoconsultora.lat</div>
+    <a class="footer-site-btn" href="https://loretoconsultora.lat" target="_blank">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      loretoconsultora.lat
+    </a>
     <div class="footer-dots">
       <div class="footer-dot" style="background:#5cc8c2;"></div>
       <div class="footer-dot" style="background:#f4a7c0;"></div>
